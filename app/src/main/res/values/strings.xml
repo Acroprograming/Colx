@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Colx</string>
+
+    <string name="item_name">Name of the item</string>
+    <string name="description">Description</string>
+    <string name="student_fname">First Name</string>
+    <string name="student_lname">Last Name</string>
+    <string name="year">year</string>
+    <string name="Class">class</string>
+    <string name="section">Section</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="log_in">Log in</string>
+    <string name="signup">Sign Up</string>
+    <string name="password">Password</string>
+    <string name="roll_number">Roll Number</string>
+    <string name="ip">192.168.43.112</string>
+    <string name="sell">Sell</string>
+
+</resources>
