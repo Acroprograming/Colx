@@ -1,6 +1,7 @@
 package com.example.santl.myapplication;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -26,6 +27,7 @@ import java.net.URLEncoder;
 public class Background extends AsyncTask<String,String,String> {
     Context context;
     AlertDialog alertDialog;
+    ProgressDialog loading;
     String ip = "192.168.43.112:8080";
     static String name,lname,id;
     Background(Context ctx) {
@@ -34,6 +36,7 @@ public class Background extends AsyncTask<String,String,String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+        loading = ProgressDialog.show(context, "Uploading...", null,true,true);
         alertDialog=new AlertDialog.Builder(context).create();
         alertDialog.setTitle("status");
     }
@@ -138,7 +141,9 @@ public class Background extends AsyncTask<String,String,String> {
             try {
                 String item_name = param[1];
                 String description=param[2];
-                String sell_url = "http://" + ip + "/Colx/sell.php";
+                String price=param[3];
+                String img=param[4];
+                String sell_url = "http://" + ip + "/Colx/sell-Copy.php";
                 URL url = new URL(sell_url);
                 HttpURLConnection httpURLConnection=(HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -148,6 +153,9 @@ public class Background extends AsyncTask<String,String,String> {
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
                 String post_data = URLEncoder.encode("item_name","UTF-8")+"="+URLEncoder.encode(item_name,"UTF-8")+"&"
                         +URLEncoder.encode("description","UTF-8")+"="+URLEncoder.encode(description,"UTF-8")+"&"
+                        +URLEncoder.encode("price","UTF-8")+"="+URLEncoder.encode(price,"UTF-8")+"&"
+                        +URLEncoder.encode("img","UTF-8")+"="+URLEncoder.encode(img,"UTF-8")+"&"
+                        +URLEncoder.encode("ip","UTF-8")+"="+URLEncoder.encode(ip,"UTF-8")+"&"
                         +URLEncoder.encode("id","UTF-8")+"="+URLEncoder.encode(id,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
@@ -163,7 +171,9 @@ public class Background extends AsyncTask<String,String,String> {
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
+                Log.i("sell",result);
                 return result;
+
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -177,6 +187,7 @@ public class Background extends AsyncTask<String,String,String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
+        loading.dismiss();
         try {
 
 

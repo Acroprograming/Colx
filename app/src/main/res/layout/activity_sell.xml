@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="73dp"
+            android:layout_marginTop="34dp"
             android:ems="10"
             android:hint="@string/item_name"
             android:inputType="textPersonName" />
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/item_name"
             android:layout_below="@+id/item_name"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/description"
             android:inputType="textMultiLine" />
@@ -50,5 +50,35 @@
             android:text="@string/sell"
             android:onClick="sell"/>
 
+        <ImageView
+            android:id="@+id/sell_image"
+            android:layout_width="@android:dimen/thumbnail_height"
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:layout_above="@+id/sell"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sell_image"
+            android:layout_toEndOf="@+id/description"
+            android:onClick="upload_image"
+            app:srcCompat="@android:drawable/ic_menu_upload" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/description"
+            android:layout_below="@+id/description"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Your Price"
+            android:inputType="textPersonName" />
+
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
