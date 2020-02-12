@@ -1,5 +1,6 @@
 package com.example.santl.myapplication;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,5 +27,16 @@ public class MainActivity extends AppCompatActivity {
         String type="log_in";
         Background bgLogin = new Background(this);
         bgLogin.execute(type,roll_number1,password1);
+    }
+
+    public void to_sign_up(View view) {
+        Intent intent = new Intent(this,signupActivity.class);
+        this.startActivity(intent);
+    }
+
+    public void check(View view) {
+        Background buy=new Background(this);
+        buy.execute("buy");
+
     }
 }

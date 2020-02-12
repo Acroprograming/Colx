@@ -58,6 +58,7 @@
                         android:inputType="textPassword"
                         android:hint="Password"/>
                 </android.support.design.widget.TextInputLayout>
+
                 <Button
                     android:id="@+id/log_in"
                     android:layout_marginTop="4dp"
@@ -65,6 +66,16 @@
                     android:layout_height="wrap_content"
                     android:onClick="log_in"
                     android:text="Login"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create a new account"
+                    android:onClick="to_sign_up"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buy"
+                    android:onClick="check"/>
             </LinearLayout>
 
         </LinearLayout>
