@@ -1,5 +1,7 @@
 package com.example.santl.myapplication;
 
+import org.json.JSONObject;
+
 /**
  * Created by santl on 28-01-2020.
  */
@@ -31,6 +33,12 @@ public class Item {
     public String item_description;
     public String item_seller;
     public String item_price;
+
+    public String getSeller_desc() {
+        return seller_desc;
+    }
+
+    public String seller_desc;
 
 
     public String getItem_img() {

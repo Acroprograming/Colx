@@ -43,7 +43,10 @@ public class Buy_recyclerview extends AppCompatActivity {
                 item.item_img = json_data.getString("img");
                 item.item_seller = json_data.getString("seller");
                 item.item_price = json_data.getString("price");
+                String json_data_seller = json_data.getJSONObject("0").toString();
+                item.seller_desc=json_data_seller;
                 data.add(item);
+                System.out.print(item.seller_desc);
             }
             adapter = new BuyRecycleAdapter(this, data);
             recyclerView.setAdapter(adapter);
@@ -61,4 +64,6 @@ public class Buy_recyclerview extends AppCompatActivity {
         Intent intent = new Intent(this,Sell.class);
         this.startActivity(intent);
     }
+
+
 }

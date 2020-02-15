@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Green"
     tools:context="com.example.santl.myapplication.splash">
     <ImageView
         android:layout_width="180dp"
@@ -21,5 +22,5 @@
         android:layout_centerHorizontal="true"
         android:textSize="50dp"
 
-        android:textColor="@color/colorAccent"/>
+        android:textColor="#ffffff"/>
 </RelativeLayout>

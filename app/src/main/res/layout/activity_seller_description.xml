@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Green"
+    tools:context="com.example.santl.myapplication.Seller_description">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Item_name"
+            android:layout_marginTop="63dp"
+            app:srcCompat="@drawable/appicon" />
+
+        <TextView
+            android:id="@+id/Item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="Item Name"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Item_name"
+            android:layout_marginTop="14dp"
+            android:layout_toStartOf="@+id/Seller_info"
+            android:text="Price: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/price_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/price_label"
+            android:layout_below="@+id/price_label"
+            android:text="Description: " />
+
+        <TextView
+            android:id="@+id/desc_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/price_d"
+            android:layout_below="@+id/price_d"
+            android:text="Description" />
+
+        <TextView
+            android:id="@+id/Seller_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="Seller Information"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/seller_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/price_label"
+            android:layout_below="@+id/Seller_info"
+            android:layout_marginTop="12dp"
+            android:text="Seller: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Class_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/seller_label"
+            android:layout_below="@+id/seller_label"
+            android:layout_marginTop="11dp"
+            android:text="Class: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/year_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/Class_label"
+            android:layout_below="@+id/Class_label"
+            android:layout_marginTop="11dp"
+            android:text="Year: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/seller_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Class_label"
+            android:layout_alignStart="@+id/desc_d"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mob_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/year_label"
+            android:layout_below="@+id/year_label"
+            android:layout_marginTop="11dp"
+            android:text="Mobile No.: " />
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/mob_label"
+            android:layout_below="@+id/mob_label"
+            android:layout_marginTop="12dp"
+            android:text="Email" />
+
+        <TextView
+            android:id="@+id/Class_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/seller_d"
+            android:layout_alignTop="@+id/Class_label"
+            android:text="CS 2" />
+
+        <TextView
+            android:id="@+id/year_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/Class_d"
+            android:layout_alignTop="@+id/year_label"
+            android:text="3rd" />
+
+        <TextView
+            android:id="@+id/mobile_no_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mob_label"
+            android:layout_alignBottom="@+id/mob_label"
+            android:layout_alignStart="@+id/year_d"
+            android:text="9874563215" />
+
+        <TextView
+            android:id="@+id/email_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/mobile_no_d"
+            android:layout_alignTop="@+id/email_label"
+            android:text="abcdefgh@gmail.com   " />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Please Contact the seller to buy the Item  "
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="italic" />
+
+        <!--
+                <TextView
+                    android:id="@+id/Class_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/year_d"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="42dp"
+                    android:layout_toEndOf="@+id/textView"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Class: " />
+
+                <TextView
+                    android:id="@+id/mobile_no_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/editText6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="62dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Mobile No: " />
+
+                <TextView
+                    android:id="@+id/seller_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/year_d"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginTop="14dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Seller: "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                <TextView
+                    android:id="@+id/year_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/Class_d"
+                    android:layout_below="@+id/seller_d"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Year: " />
+
+                <TextView
+                    android:id="@+id/email_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/mobile_no_d"
+                    android:layout_below="@+id/mobile_no_d"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Email: " />
+
+                <TextView
+                    android:id="@+id/editText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/seller_d"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="14dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Please contact the seller to buy the product"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/year_d"
+                    android:layout_toStartOf="@+id/email_d"
+                    android:text="TextView" />
+        -->
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

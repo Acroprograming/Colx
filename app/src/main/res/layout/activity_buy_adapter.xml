@@ -18,7 +18,7 @@ android:padding="10dp">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_toLeftOf="@+id/price"
+        android:layout_toLeftOf="@+id/price_d"
         android:layout_toRightOf="@id/img"
         android:text="Item name"
          />
@@ -28,7 +28,7 @@ android:padding="10dp">
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="price"
-        android:id="@+id/price"
+        android:id="@+id/price_d"
         android:textColor="@color/colorAccent"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="5dp"

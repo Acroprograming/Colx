@@ -30,7 +30,7 @@ public class Sell extends AppCompatActivity {
     public void sell(View view) {
         EditText item_name = findViewById(R.id.item_name);
         EditText description = findViewById(R.id.description);
-        EditText price = findViewById(R.id.price);
+        EditText price = findViewById(R.id.price_d);
         String item_name1 = item_name.getText().toString();
         String desc = description.getText().toString();
         String price1 = price.getText().toString();

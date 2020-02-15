@@ -50,7 +50,7 @@ public class Background extends AsyncTask<String,String,String> {
         super.onPreExecute();
         loading = ProgressDialog.show(context, "Uploading...", null, true, true);
         alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("status");
+        alertDialog.setTitle("Status");
     }
 
     @Override
@@ -192,7 +192,7 @@ public class Background extends AsyncTask<String,String,String> {
             }
         } else if (type.equals("buy")) {
             try {
-                String buy_url = "http://" + ip + "/Colx/buy.php";
+                String buy_url = "http://" + ip + "/Colx/buy1.php";
                 URL url = new URL(buy_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
@@ -252,8 +252,8 @@ public class Background extends AsyncTask<String,String,String> {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(context, signupActivity.class);
-                        context.startActivity(intent);
+                        Background background_buy= new Background(context);
+                        background_buy.execute("buy");
                     }
                 }, 1000);
             } else if (result.equals("failed to sell the item")) {
