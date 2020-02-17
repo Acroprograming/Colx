@@ -16,6 +16,10 @@ It is similar to Olx but specific to college students.
 5. Open the project in Android studio and Run the project after successful build
 
 ### The App looks like this:
+
+  ![Gif](https://github.com/Acroprograming/Colx/blob/master/app/src/main/res/Colx%20Description%20files/video.gif)
+
+### Screenshots
 ![Splash Screen](https://github.com/Acroprograming/Colx/blob/master/app/src/main/res/Colx%20Description%20files/1%20splash%20screen.jpg)
 
 ![Login Screen](https://github.com/Acroprograming/Colx/blob/master/app/src/main/res/Colx%20Description%20files/2%20login%20Screen.jpg)
